@@ -9,9 +9,6 @@ public class Stack {
         count = 0;
     }
 
-    public Stack() {
-    }
-
     void push(String elem) {
         elements[count] = elem;
         count++;
