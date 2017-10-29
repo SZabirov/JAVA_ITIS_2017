@@ -8,7 +8,7 @@ public interface ProductsDao {
     void add(String product) throws IOException;
 
     /**
-     * Удаляет продукт из файла
+     * Удаляет конкретный продукт
      * @param product название продукта, который надо удалить
      */
     void remove(String product) throws IOException;
