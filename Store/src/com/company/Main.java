@@ -4,9 +4,21 @@ import java.io.*;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
-        ProductsDao dao = new ProductsDaoTxtImplementation();
-        dao.add("шоколад");
+    public static void main(String[] args) throws IOException, ProductNotFoundException {
+        ProductsDao dao = new ProductsDaoCsvImplementation();
+        System.out.println(dao.getPrice("яблоки"));
+
+        Product product = new Product("хлеб", 40, "Хлебзавод 1");
+        dao.add(product);
+
+//        String str = "abc, abc";
+//        String[] strings = str.split(",");
+//        System.out.println(strings[0]);
+//        System.out.println(strings[1]);
+
+//        ProductsDao dao = new ProductsDaoTxtImplementation();
+//        dao.remove("яблоки");
+
 //        File file = new File("products.txt");
 //        Reader reader = new FileReader(file);
 //        BufferedReader br = new BufferedReader(reader);

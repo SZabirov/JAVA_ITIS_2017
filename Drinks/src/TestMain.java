@@ -9,6 +9,8 @@ public class TestMain {
         waiter.serve(juice);
         waiter.serve(soda);
 
+        Drink drink = new Drink();
+
 //        Juice juice = new Juice();
 //        juice.cool(10);
 //        System.out.println(juice.temperature);

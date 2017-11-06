@@ -3,8 +3,8 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Stack stack = new Stack();
-        String s = "(){[]}}}}}}}}}}}";
+        Stack stack = new Stack(5);
+        String s = ")(){[]}";
         boolean everythingIsCorrect = true;
         for (int i = 0; i < s.length(); i++) {
             char symbol = s.charAt(i);

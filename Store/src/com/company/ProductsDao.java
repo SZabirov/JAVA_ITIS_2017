@@ -3,15 +3,15 @@ package com.company;
 import java.io.IOException;
 
 public interface ProductsDao {
-    boolean exists(String product) throws IOException;
+    boolean exists(Product product) throws IOException;
 
-    void add(String product) throws IOException;
+    void add(Product product) throws IOException;
 
     /**
      * Удаляет конкретный продукт
      * @param product название продукта, который надо удалить
      */
-    void remove(String product) throws IOException;
+    void remove(String productName) throws IOException;
 
     /**
      * Заменяет один продукт на другой
@@ -19,4 +19,6 @@ public interface ProductsDao {
      * @param product2 продукт, который заменит первый продукт
      */
     void replace(String product1, String product2) throws IOException;
+
+    int getPrice(String productName)throws IOException, ProductNotFoundException;
 }
