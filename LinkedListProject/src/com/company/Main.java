@@ -5,11 +5,14 @@ public class Main {
 
     public static void main(String[] args) {
 	    LinkedList<Integer> list = new LinkedList<>();
-
-
-
-	    Node<String> node1 = new Node<>("abc", null);
-	    Node<String> node2 = new Node<>("abc", node1);
+	    list.add(6);
+	    list.add(3);
+	    list.add(1);
+		list.add(null);
+		list.add(9);
+		list.add(null);
+		list.add(0);
+		System.out.println(list.toString());
 
 
 

@@ -1,14 +1,44 @@
 package com.company;
 
 public class LinkedList<T> {
-    Node<T> head;
+    private Node<T> head;
 
     void add(T elem) {
-
+        Node<T> node = new Node<>(elem, null);
+        if (head == null) {
+            head = node;
+        } else {
+            Node<T> cur = head;
+            while (cur.getNext() != null) {
+                cur = cur.getNext();
+            }
+            cur.setNext(node);
+        }
     }
 
     T get(int i) {
         return null;
+    }
+
+    @Override
+    public String toString() {
+        String s = "LinkedList{";
+        if (head != null) {
+            Node<T> cur = head;
+            while (cur.getNext() != null) {
+                T value = cur.getValue();
+//                s += value != null ? value.toString() : "null";
+                if (value != null) {
+                    s += value.toString();
+                } else {
+                    s += "null";
+                }
+                s += ", ";
+                cur = cur.getNext();
+            }
+            s += cur.getValue() != null ? cur.getValue().toString() : "null";        }
+        s += "}";
+        return s;
     }
 
     private class Node<T> {
@@ -22,6 +52,19 @@ public class LinkedList<T> {
 
         Node<T> getNext() {
             return next;
+        }
+
+        public void setNext(Node<T> next) {
+            this.next = next;
+        }
+
+        public T getValue() {
+            return value;
+        }
+
+        @Override
+        public String toString() {
+            return value.toString();
         }
     }
 }
