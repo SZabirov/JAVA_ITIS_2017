@@ -12,7 +12,7 @@ public class Main {
 		list.add(9);
 		list.add(null);
 		list.add(0);
-		System.out.println(list.toString());
+		System.out.println(list);
 
 
 

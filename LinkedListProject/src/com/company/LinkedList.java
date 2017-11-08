@@ -2,6 +2,11 @@ package com.company;
 
 public class LinkedList<T> {
     private Node<T> head;
+    private int count;
+
+    public LinkedList() {
+        count = 0;
+    }
 
     void add(T elem) {
         Node<T> node = new Node<>(elem, null);
@@ -14,10 +19,20 @@ public class LinkedList<T> {
             }
             cur.setNext(node);
         }
+        count++;
     }
 
     T get(int i) {
-        return null;
+        if (i < 0 || i >= count) {
+            throw new IndexOutOfBoundsException("Incorrect index: " + i);
+        } else {
+            //FIXME implement returning real element
+            return null;
+        }
+    }
+
+    void remove (int i) {
+        //TODO implement method
     }
 
     @Override
@@ -68,3 +83,22 @@ public class LinkedList<T> {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
