@@ -25,11 +25,6 @@ public class Main {
 
 
 
-
-
-
-
-
 //	    int a = 5;
 //	    list.add(a);
 //	    Integer intValue = (Integer) list.get(0);

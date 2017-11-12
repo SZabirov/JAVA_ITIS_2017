@@ -53,6 +53,10 @@ public class LinkedList<T> {
         }
     }
 
+    int size() {
+        return count;
+    }
+
     @Override
     public String toString() {
         String s = "LinkedList{";
@@ -69,8 +73,7 @@ public class LinkedList<T> {
                 s += ", ";
                 cur = cur.getNext();
             }
-            s += cur.getValue() != null ? cur.getValue().toString() : "null";
-        }
+            s += cur.getValue() != null ? cur.getValue().toString() : "null";        }
         s += "}";
         return s;
     }
