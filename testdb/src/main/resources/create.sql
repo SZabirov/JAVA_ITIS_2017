@@ -5,3 +5,7 @@ CREATE TABLE products (
     price INTEGER,
     count INTEGER
 );
+
+SELECT * FROM products WHERE factory = 'Молокозавод 3';
+DROP TABLE products;
+SELECT where 'abc' = 'abc
