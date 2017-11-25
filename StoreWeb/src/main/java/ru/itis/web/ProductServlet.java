@@ -20,6 +20,13 @@ public class ProductServlet extends HttpServlet {
             ProductsDao dao = new ProductsDaoImpl();
             Product product = dao.getProduct(productId);
             resp.getWriter().write(product.toString());
+            String str = "<html>\n" +
+                    "<head>\n" +
+                    "    <meta charset=\"UTF-8\">\n" +
+                    "    <title>First page</title>\n" +
+                    "</head>\n" +
+                    "<body>\n" +
+                    "<h1>Продукты</h1>";
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {

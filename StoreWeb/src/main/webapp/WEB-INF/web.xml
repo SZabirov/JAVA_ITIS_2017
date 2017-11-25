@@ -24,4 +24,39 @@
         <url-pattern>/product</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>allProducts</servlet-name>
+        <servlet-class>ru.itis.web.AllProductsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>allProducts</servlet-name>
+        <url-pattern>/products</url-pattern>
+    </servlet-mapping>
+    <operator>
+        <operator-name>Марья Васильевна</operator-name>
+        <operator-class>Иванова Марья Васильевна, 6321 450976</operator-class>
+    </operator>
+    <operator-mapping>
+        <operator-name>Марья Васильевна</operator-name>
+        <task-pattern>/регистрация</task-pattern>
+    </operator-mapping>
 </web-app>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
