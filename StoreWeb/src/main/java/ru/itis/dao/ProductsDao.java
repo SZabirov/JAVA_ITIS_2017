@@ -11,7 +11,7 @@ public interface ProductsDao {
      */
     Product getProduct(int id) throws ClassNotFoundException, SQLException;
 
-    List<Product> getAllProducts();
+    List<Product> getAllProducts() throws SQLException;
 
     List<Product> getProductByFactory(String factory) throws SQLException;
 

@@ -32,8 +32,20 @@ public class ProductsDaoImpl implements ProductsDao {
     }
 
     @Override
-    public List<Product> getAllProducts() {
-        return null;
+    public List<Product> getAllProducts() throws SQLException {
+        PreparedStatement stmt = c.prepareStatement("SELECT * FROM products");
+        ResultSet rs = stmt.executeQuery();
+        List<Product> products = new ArrayList<>();
+        while (rs.next()) {
+            int id = rs.getInt("id");
+            String name = rs.getString("name");
+            int price = rs.getInt("price");
+            int count = rs.getInt("count");
+            String factory = rs.getString("factory");
+            Product product = new Product(id, name, factory, price, count);
+            products.add(product);
+        }
+        return products;
     }
 
     @Override
