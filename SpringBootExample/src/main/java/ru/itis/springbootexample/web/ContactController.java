@@ -25,8 +25,10 @@ public class ContactController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/contacts/{id}")
-    Contact getContact (@PathVariable Long id) {
-        return contactService.getContact(id);
+    String getContact (Model model, @PathVariable Long id) {
+        Contact contact = contactService.getContact(id);
+        model.addAttribute(contact);
+        return "contact";
     }
 
     @RequestMapping(method = RequestMethod.GET, params = "name", value = "/contacts")
