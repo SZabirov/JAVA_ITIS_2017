@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>All contacts</title>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
+    
 </head>
 <body>
 <nav class="navbar navbar-static-top navbar-dark bg-inverse">
