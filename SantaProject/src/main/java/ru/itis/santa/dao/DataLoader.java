@@ -23,5 +23,8 @@ public class DataLoader implements ApplicationRunner {
         if (userRepository.findByUsername("user") == null) {
             userRepository.save(new User("user", "password", "USER"));
         }
+        if (userRepository.findByUsername("user1") == null) {
+            userRepository.save(new User("user1", "password", "USER"));
+        }
     }
 }

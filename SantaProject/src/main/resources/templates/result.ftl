@@ -1,14 +1,13 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Сайт Деда Мороза</title>
+    <title>Result</title>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/footer.css" type="text/css">
 </head>
 <body>
-
 <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-
     <a class="navbar-brand" href="#">SantaProject</a>
 
     <div class="navbar-collapse">
@@ -16,11 +15,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="/letters">Посмотреть все письма</a>
+            <li class="nav-item ">
+                <a class="nav-link" href="/letter">Написать письмо</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/kids">Ребята</a>
+            <li class="nav-item active">
+                <a class="nav-link" href="/behavior">Оценить поведение</a>
             </li>
         </ul>
 
@@ -31,26 +30,18 @@
     </div>
 </nav>
 
-<div class="container">
-    <table class="table">
-        <tr>
-            <th>Номер ребенка</th>
-            <th>Имя</th>
-            <th>E-mail</th>
-            <th>Возраст</th>
-            <th>Текст Письма</th>
-        </tr>
+<div class="jumbotron" style="margin-top: -30px; ">
+    <div class="container">
+        <h1 class="display-3">Анкета поведения</h1>
 
-    <#list letterList as list>
-    <tr>
-        <td>${list.id}</td>
-        <td>${list.name}</td>
-        <td>${list.email}</td>
-        <td>${list.age}</td>
-        <td>${list.letter}</td>
-    </tr>
-    </#list>
-    </table>
+    <#--<p><img width="700" height="350" class="img-thumbnail" alt="" src="/images/5.jpg"></p>-->
+
+    </div>
+</div>
+
+<div class="container">
+    <h1>Ваш результат составляет: ${res}/100</h1>
+
 </div>
 
 <footer class="footer">

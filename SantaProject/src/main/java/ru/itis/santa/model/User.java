@@ -1,6 +1,7 @@
 package ru.itis.santa.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -9,6 +10,8 @@ public class User {
     private String username;
     private String password;
     private String role;
+    @OneToMany
+    List<Letter> letters;
 
     public User(String username, String password, String role) {
         this.username = username;
